@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.8.0</PackageVersion>
+    <Authors>Neville Nazerane</Authors>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://docs.mesg.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/neville-nazerane/mesg-apis.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Title>Mesg Core apis</Title>
+    <Description>
+      Unofficial packages for mesg
+    </Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.6.1" />
+    <PackageReference Include="Grpc" Version="1.18.0" />
+    <PackageReference Include="Grpc.Tools" Version="1.18.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="../protos/v0.8.0/mesgCore.proto" Link="core.proto" />
+  </ItemGroup>
+
+</Project>
