@@ -17,13 +17,12 @@ Adding service library (meant for service)
 
     var response = client.ListenEvent(new ListenEventRequest{ ServiceID = "webhook", EventFilter = "request" }).ResponseStream;
 
-    System.Console.WriteLine("Starting...");
+    Console.WriteLine("Started...");
     while (await response.MoveNext(CancellationToken.None)) {
-        Console.WriteLine(response.Current);
         client.ExecuteTask(new ExecuteTaskRequest{
             ServiceID = "discord-invitation",
             TaskKey = "send",
             InputData = JsonConvert.SerializeObject(new {email, sendgridAPIKey})
         });
-        System.Console.WriteLine("Next...");
+        Console.WriteLine("Waiting for next...");
     }
