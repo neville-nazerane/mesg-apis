@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.8.0</PackageVersion>
+    <PackageVersion>0.8.1</PackageVersion>
     <Authors>Neville Nazerane</Authors>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://docs.mesg.com</PackageProjectUrl>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="../protos/v0.8.0/mesgCore.proto" Link="core.proto" />
+    <Protobuf Include="../protos/v0.9.0/mesgCore.proto" Link="core.proto" />
   </ItemGroup>
 
 </Project>
